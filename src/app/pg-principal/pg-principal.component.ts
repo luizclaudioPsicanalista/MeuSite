@@ -11,14 +11,22 @@ import { Component, HostListener } from '@angular/core';
 export class PgPrincipalComponent {
 
 
-  mostrarOutraDiv = false;
+  mostrarDiv1 = true;
 
-@HostListener('window:wheel', ['$event'])
-onWheel(event: WheelEvent) {
-  if (event.deltaY > 0) {
-    this.mostrarOutraDiv = true;
-  } else {
-    this.mostrarOutraDiv = false;
+  private lastScrollTop = 0;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > this.lastScrollTop) {
+      // scroll pra baixo
+      this.mostrarDiv1 = false;
+    } else if (scrollTop < this.lastScrollTop) {
+      // scroll pra cima
+      this.mostrarDiv1 = true;
+    }
+
+    this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   }
-}
 }
