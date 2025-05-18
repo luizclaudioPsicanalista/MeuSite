@@ -1,14 +1,15 @@
 <div class="container py-5 ">
     <div class="d-flex justify-content-center align-items-center vh-100 ">
-        <div class="divPrincipal p-4 rounded shadow text-center " style="max-width: 500px; width: 100%;">
+        <div class="divPrincipal p-4 rounded shadow text-center " style="max-width: 500px; width: 100%;" *ngIf="!mostrarOutraDiv">
             <div class="d-flex justify-content-center align-items-center ">
                 <img
                   src="assets\926f3276-b1ad-4f99-94b0-3dea9be053aa.jpg"
                   alt="Imagem redonda"
                   class="rounded-circle border border-2"
                   style="width: 200px; height: 200px; object-fit: cover;">
-              </div>
-          <h1 class="mb-3 text-white">Luiz Claudio Psicanálise </h1>
+            </div>
+          <h1 class="mb-3 text-white">Luiz Claudio Lacerda</h1>
+          <h3 class="mb-3 text-white">Terapeuta de base psicanalítica </h3>
           <p class="mb-4 text-white">Tendo a psicanálise como abordagem, atendo pacientes adultos nas formas presencial e online.
                           Para informações mais detalhadas e também para agendar uma primeira conversa, chame no WhatsApp </p>
           <a class="btn btn-success d-flex align-items-center gap-2" style="justify-content: center; align-items: center;"
@@ -17,6 +18,23 @@
                 rel="noopener noreferrer">
                     <i class="fab fa-whatsapp fa-2x"></i>
            </a>
+        </div>
+
+        <div class="divPrincipal p-4 rounded shadow text-center " style="max-width: 500px; width: 100%;" *ngIf="mostrarOutraDiv">
+            <div class="d-flex justify-content-center align-items-center ">
+                <img
+                  src="assets\926f3276-b1ad-4f99-94b0-3dea9be053aa.jpg"
+                  alt="Imagem redonda"
+                  class="rounded-circle border border-2"
+                  style="width: 200px; height: 200px; object-fit: cover;">
+            </div>
+            <br>
+          <p class="mb-4 text-white"> Nem só de neuroses vive o homem, mas, as vezes, para não dizer sempre, nossa autoimagem idealizada conflita com o rio subterrâneo que corre em nós, gerando aquilo que por aqui chamamos assim, neuroses. </p>
+          <p class="mb-4 text-white"> Situações onde queremos fazer algo e fazemos um outro algo ou onde não queremos fazer uma determinada coisas e nos comportamos justamente como não queríamos.  </p>
+          <p class="mb-4 text-white"> Afetos que não sabemos dar nome, desejos que não sabemos nem mesmo que estão lá, acenam e tomam conta como angústia...
+            Angústia é o sem nome, mas que dói. </p>
+          <p class="mb-4 text-white"> Sem dar a oportunidade para que aquilo que sairá de qualquer forma, saia sem as destruições que não desejamos, e sim com graça e alegria, só se pudermos vir a olhar, olhar e saber, saber e tomar intimidade com esses issos, pois quando visto, o que estava à sombra se fará no mundo em formas novas, mais leves e criativas, pois a luz faz caminho. </p>
+          
         </div>
     </div>
 </div>
