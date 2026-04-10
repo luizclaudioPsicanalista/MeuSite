@@ -1,0 +1,8 @@
+<div *ngFor="let card of content">
+    <div class="divPrincipal p-4 rounded shadow text-center m-2" style="max-width: 500px; width: 100%;" >
+        <h4 *ngIf="card.titulo" class="mb-4 text-white"> {{card.titulo}} </h4>
+        <div *ngFor="let line of card.lines">
+            <p class="mb-4 text-white">{{line}}</p>
+        </div>
+    </div>
+</div>
