@@ -1,0 +1,31 @@
+name: Deploy Angular to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main   # ou master (confere no seu repo)
+
+permissions:
+  contents: write
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Build Angular
+        run: npx ng build luizclaudioApp --configuration production --base-href /
+
+      - name: Deploy no GitHub Pages
+        run: npx angular-cli-ghpages --dir=dist/MeuSite/browser --cname=www.luizclaudiopsicanalise.com.br
